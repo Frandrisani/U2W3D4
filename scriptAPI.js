@@ -38,6 +38,12 @@ search.addEventListener("submit", function (e) {
       arrayImg.forEach((img, i) => {
         img.src = data.photos[i].src.small;
       });
+      arrayIdCard.forEach((id, i) => {
+        id.innerHTML = `${data.photos[i].id}`;
+      });
+      arrayTasto.forEach((tasto, i) => {
+        tasto.innerHTML = `Hide`;
+      });
     })
     .catch((err) => {
       console.log(err);
