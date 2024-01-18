@@ -43,6 +43,9 @@ search.addEventListener("submit", function (e) {
       });
       arrayTasto.forEach((tasto, i) => {
         tasto.innerHTML = `Hide`;
+        tasto.addEventListener("click", function (e) {
+          e.target.closest(".col-md-4").remove();
+        });
       });
     })
     .catch((err) => {
